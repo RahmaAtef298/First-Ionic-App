@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,eAAe,CAAA;EACX,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "bookings.page.scss"
+    ],
+    "names": [],
+    "file": "bookings.page.css"
+}

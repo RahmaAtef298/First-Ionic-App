@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAA;EACV,gBAAgB,CAAA,QAAC;CACpB",
+    "sources": [
+        "places.page.scss"
+    ],
+    "names": [],
+    "file": "places.page.css"
+}

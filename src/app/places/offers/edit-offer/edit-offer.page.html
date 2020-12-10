@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/places/tabs/offers/+ placeId" color="light">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Offer</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onUpdateOffer()" color="light" [disabled]="!EditOfferForm?.valid">
+        <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <div class="ion-text-center" *ngIf="isLoading">
+    <ion-spinner color="secondary"></ion-spinner>
+  </div>
+  <form [formGroup]="EditOfferForm" *ngIf="!isLoading">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating" color="secondary">Title</ion-label>
+              <ion-input type="text" autocomplete autocorrect formControlName="title"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating" color="secondary">Short Description</ion-label>
+              <ion-textarea rows="3" formControlName="description"></ion-textarea>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="!EditOfferForm.get('description').valid && EditOfferForm.get('description').touched">
+        <ion-col size-sm="6" offset-sm="3">
+          <p style="color: #eb445a">Description Must be between 1 and 180 Characters. </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

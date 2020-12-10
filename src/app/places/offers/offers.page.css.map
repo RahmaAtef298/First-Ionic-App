@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,eAAe,CAAA;EACX,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "offers.page.scss"
+    ],
+    "names": [],
+    "file": "offers.page.css"
+}
